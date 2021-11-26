@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="container d-flex flex-column m-5">
+    <header class="mb-3">
+      <h4>My Todo</h4>
+      <div class="form-inline">
+        <input type="text" size="18" maxlength="20" placeholder="add item" id="newTodo" class="form-control mr-2">
+        <button id="addBtn" class="btn btn-info">Add</button>
+      </div>
+    </header>
+    <div class="list-section">
+      <ul id="my-todo" class="list-unstyled">
+        <li>
+          <h4>Todo</h4>
+        </li>
+        <!-- display todos here -->
+      </ul>
+      <ul id="my-done" class="list-unstyled">
+        <li>
+          <h4>Done</h4>
+        </li>
+        <!-- display dones here -->
+      </ul>
+    </div>
+
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.5.4/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.min.js"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>
