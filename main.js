@@ -41,7 +41,7 @@ addBtn.addEventListener('click', function (event) {
 //監聽 Enter 鍵
 newTodo.addEventListener('keypress', function (event) {
   let inputValue = newTodo.value
-  if (event.target.matches('#newTodo') && event.keyCode == 13) {
+  if (event.target.matches('#newTodo') && event.key === "Enter") {
     checkInputValue(inputValue)  //用函式檢查 input
   }
 })
@@ -66,13 +66,11 @@ list.addEventListener('click', function (event) {
 })
 
 function checkInputValue(inputValue) {  //檢查Input內容
-  if (inputValue !== "") {  //排除無內容
+  if (inputValue.trim() !== "") {
     addItem(inputValue, todoList)
-    newTodo.value = "";  //重置 input
-  } else if (inputValue.indexOf(" ") !== 0 && inputValue.indexOf(" ") !== -1) {  //排除空白鍵開頭
-    addItem(inputValue.trim(), todoList)
     newTodo.value = "";  //重置 input
   } else {  //觸發 alert
     alert("請填寫欄位(add item)")
   }
 }
+
